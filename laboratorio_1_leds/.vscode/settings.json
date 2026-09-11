@@ -1,0 +1,16 @@
+{
+  "C_Cpp.intelliSenseEngine": "default",
+  "idf.extensionActivationMode": "always",
+  "idf.openOcdConfigs": [
+    "board/esp32s2-kaluga-1.cfg"
+  ],
+  "idf.currentSetup": "C:\\Users\\estef\\esp\\v4.4.7\\esp-idf",
+  "idf.customExtraVars": {
+    "OPENOCD_SCRIPTS": "C:\\Users\\estef\\.espressif\\tools\\openocd-esp32\\v0.12.0-esp32-20230921/openocd-esp32/share/openocd/scripts",
+    "IDF_CCACHE_ENABLE": "1",
+    "IDF_TARGET": "esp32s2"
+  },
+  "idf.flashType": "UART",
+  "idf.monitorPort": "COM4",
+  "idf.portWin": "COM4"
+}
