@@ -1,0 +1,11 @@
+{
+  "idf.currentSetup": "C:\\esp\\v5.5.5\\esp-idf",
+  "idf.openOcdConfigs": [
+    "board/esp32s2-kaluga-1.cfg"
+  ],
+  "idf.customExtraVars": {
+    "IDF_TARGET": "esp32s2"
+  },
+  "idf.portWin": "COM6",
+  "idf.flashType": "UART"
+}
