@@ -1,0 +1,5 @@
+# ninja log v6
+488	4126	8132894246392087	esp-idf/esp_system/ld/memory.ld	dde6a74458d3861
+488	4126	8132894246392087	C:/Users/estef/OneDrive/Documents/labs_embebidos_2026/lab_4_Control de Flujo/build/esp-idf/esp_system/ld/memory.ld	dde6a74458d3861
+1152	4329	8132894249950600	esp-idf/esp_system/ld/sections.ld.in	54c00650bd628c8
+1152	4329	8132894249950600	C:/Users/estef/OneDrive/Documents/labs_embebidos_2026/lab_4_Control de Flujo/build/esp-idf/esp_system/ld/sections.ld.in	54c00650bd628c8
