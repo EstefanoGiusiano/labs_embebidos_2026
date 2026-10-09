@@ -3,3 +3,38 @@
 488	4126	8132894246392087	C:/Users/estef/OneDrive/Documents/labs_embebidos_2026/lab_4_Control de Flujo/build/esp-idf/esp_system/ld/memory.ld	dde6a74458d3861
 1152	4329	8132894249950600	esp-idf/esp_system/ld/sections.ld.in	54c00650bd628c8
 1152	4329	8132894249950600	C:/Users/estef/OneDrive/Documents/labs_embebidos_2026/lab_4_Control de Flujo/build/esp-idf/esp_system/ld/sections.ld.in	54c00650bd628c8
+2930	13953	8132894250099647	project_elf_src_esp32s2.c	222874e7cc42cf00
+2930	13953	8132894250099647	C:/Users/estef/OneDrive/Documents/labs_embebidos_2026/lab_4_Control de Flujo/build/project_elf_src_esp32s2.c	222874e7cc42cf00
+1716	16563	8132894251003796	partition_table/partition-table.bin	9f15d48f62205c7a
+1716	16563	8132894251003796	C:/Users/estef/OneDrive/Documents/labs_embebidos_2026/lab_4_Control de Flujo/build/partition_table/partition-table.bin	9f15d48f62205c7a
+13250	27574	8132894341381506	esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src/httpd_ws.c.obj	6af399e9e8d8bd6c
+13475	30507	8132894343711895	esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src/util/ctrl_sock.c.obj	f9b7b1abb39dd9ef
+16564	32897	8132894372874555	esp-idf/esp_http_client/CMakeFiles/__idf_esp_http_client.dir/lib/http_auth.c.obj	980cba97cca2a7bc
+27646	33855	8132894483677263	esp-idf/esp_http_client/CMakeFiles/__idf_esp_http_client.dir/lib/http_header.c.obj	423c2c109fb1e469
+11758	35748	8132894326549131	esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src/httpd_uri.c.obj	efb775edda93de36
+30510	37538	8132894512017569	esp-idf/esp_http_client/CMakeFiles/__idf_esp_http_client.dir/lib/http_utils.c.obj	55966bfecd1dda05
+7635	37863	8132894284846205	esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src/httpd_sess.c.obj	a3dee43402bb3c1a
+5361	42364	8132894262448730	esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src/httpd_main.c.obj	ec11f418e59254b9
+10543	44155	8132894312334075	esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src/httpd_txrx.c.obj	8e622405bd6756a8
+4330	45491	8132894250179676	esp-idf/esp_https_ota/CMakeFiles/__idf_esp_https_ota.dir/src/esp_https_ota.c.obj	cee55dcab21843d7
+6590	46869	8132894272784120	esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src/httpd_parse.c.obj	902916386c1fb63b
+35751	48217	8132894564425539	esp-idf/tcp_transport/CMakeFiles/__idf_tcp_transport.dir/transport_internal.c.obj	44ea8371f9fb1959
+33858	50766	8132894546229708	esp-idf/tcp_transport/CMakeFiles/__idf_tcp_transport.dir/transport_ssl.c.obj	7272dfa78b3f68d3
+37541	51654	8132894582374728	esp-idf/tcp_transport/CMakeFiles/__idf_tcp_transport.dir/transport_socks_proxy.c.obj	49355d0b0c523b9
+32899	53490	8132894536222918	esp-idf/tcp_transport/CMakeFiles/__idf_tcp_transport.dir/transport.c.obj	5ef592da49e1af57
+13957	55338	8132894351408693	esp-idf/esp_http_client/CMakeFiles/__idf_esp_http_client.dir/esp_http_client.c.obj	e570bb9dc0622b54
+42367	56818	8132894630595837	esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/src/esp_eth.c.obj	a9b3f91fd37f08d4
+37868	58656	8132894585568611	esp-idf/tcp_transport/CMakeFiles/__idf_tcp_transport.dir/transport_ws.c.obj	f96e6fd11b3a03eb
+45501	59776	8132894662414936	esp-idf/esp_https_ota/libesp_https_ota.a	ee4c78487c2ba57
+53529	65350	8132894748090820	esp-idf/esp_adc/CMakeFiles/__idf_esp_adc.dir/adc_cali_curve_fitting.c.obj	5a7392318f7a782
+59819	65420	8132894814557350	esp-idf/esp_http_server/libesp_http_server.a	16bf48efe324d41a
+55396	68416	8132894766873001	esp-idf/esp_adc/CMakeFiles/__idf_esp_adc.dir/deprecated/esp_adc_cal_common_legacy.c.obj	32a0fa3977568ba1
+51658	70160	8132894727351758	esp-idf/esp_adc/CMakeFiles/__idf_esp_adc.dir/adc_cali.c.obj	3f5ef4ced9dee4fb
+48235	73332	8132894689487258	esp-idf/esp_adc/CMakeFiles/__idf_esp_adc.dir/adc_oneshot.c.obj	7e4ab899238d41e9
+65422	73397	8132894869525491	esp-idf/esp_http_client/libesp_http_client.a	28e59a6bb34ef9
+73397	77370	8132894945703714	esp-idf/tcp_transport/libtcp_transport.a	3da198046e9dc315
+50777	78585	8132894718041642	esp-idf/esp_adc/CMakeFiles/__idf_esp_adc.dir/adc_common.c.obj	107fb680ffc2daaf
+46879	78625	8132894675757006	esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/src/esp_eth_netif_glue.c.obj	7244ed3ec32aee06
+73335	81414	8132894940402626	esp-idf/esp_adc/CMakeFiles/__idf_esp_adc.dir/deprecated/esp32s2/esp_adc_cal_legacy.c.obj	7939569acc9f0818
+70235	82844	8132894910370590	esp-idf/esp_adc/CMakeFiles/__idf_esp_adc.dir/esp32s2/adc_cali_line_fitting.c.obj	ef8d6d45d355c9f1
+65352	84394	8132894860430399	esp-idf/esp_adc/CMakeFiles/__idf_esp_adc.dir/esp32s2/adc_dma.c.obj	32c366f895c71241
