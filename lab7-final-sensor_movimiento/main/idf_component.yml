@@ -1,0 +1,18 @@
+
+# Componentes gestionados que ESP-IDF descarga automáticamente al compilar.
+dependencies:
+  # El driver de cámaras de Espressif: OV2640 y una veintena de sensores más.
+  # En el ESP32-S2 usa el único I2S en "modo cámara", con DMA.
+  espressif/esp32-camera: "^2.1.8"
+  # El decodificador JPEG (TJpgDec). El ESP32-S2 no lo trae en la ROM: se
+  # compila con el programa. El driver de la cámara también lo usa.
+  espressif/esp_jpeg: "^1.3.1"
+  # Controlador del panel ILI9341, para las LCD32 que lo llevan. El ST7789
+  # ya viene dentro del componente esp_lcd de ESP-IDF.
+  espressif/esp_lcd_ili9341: "^2.1.0"
+  # Cliente MQTT de Espressif, para los avisos al panel (como en la Clase 6).
+  # Solo con ESP-IDF 6.0 o más: en la 5.x el cliente MQTT ya viene incluido.
+  espressif/mqtt:
+    version: "^1.1.0"
+    rules:
+      - if: "idf_version >=6.0"

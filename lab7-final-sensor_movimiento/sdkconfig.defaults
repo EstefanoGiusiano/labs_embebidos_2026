@@ -1,0 +1,86 @@
+# Valores por defecto de este ejemplo. idf.py los aplica al crear el
+# sdkconfig; para cambiarlos después, `idf.py menuconfig` o borrar sdkconfig.
+
+# La Kaluga-1 trae 4 MB de flash. Con el valor por defecto (2 MB) se
+# desperdicia la mitad: ver clase-3/error-flash-size.md.
+CONFIG_ESPTOOLPY_FLASHSIZE_4MB=y
+CONFIG_PARTITION_TABLE_SINGLE_APP_LARGE=y
+
+# 240 MHz en vez de los 160 MHz por defecto del ESP32-S2. El visor pasa casi
+# todo su tiempo decodificando JPEG, que es CPU pura: un 50 % más de reloj
+# es casi un 50 % más de cuadros por segundo.
+CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ_240=y
+
+# La PSRAM del módulo ESP32-S2-WROVER (2 MB): ahí van los cuadros de la
+# cámara, los JPEG copiados y la imagen decodificada. A 80 MHz, como en el
+# ejemplo de cámara de Espressif para la Kaluga-1, en vez de 40.
+CONFIG_SPIRAM=y
+CONFIG_SPIRAM_SPEED_80M=y
+
+# Tick de 1 ms, como en las Clases 4, 5 y 6.
+CONFIG_FREERTOS_HZ=1000
+
+# El informe: todas las tareas con su prioridad y su pila libre
+# (uxTaskGetSystemState) y el tiempo de CPU de cada una, contado en µs con un
+# contador de 64 bits (el de 32 bits da la vuelta cada 71 minutos).
+CONFIG_FREERTOS_USE_TRACE_FACILITY=y
+CONFIG_FREERTOS_GENERATE_RUN_TIME_STATS=y
+CONFIG_FREERTOS_RUN_TIME_COUNTER_TYPE_U64=y
+
+# Avisa por consola si una tarea desborda su pila, en lugar de reiniciar sin
+# explicación.
+CONFIG_FREERTOS_CHECK_STACKOVERFLOW_CANARY=y
+
+# El informe se imprime desde el callback de un temporizador software, que
+# corre en la tarea "Tmr Svc". Su pila por defecto (2 KB) va justa para una
+# veintena de líneas de ESP_LOGI.
+CONFIG_FREERTOS_TIMER_TASK_STACK_DEPTH=3584
+
+# La ESP-LyraP-CAM admite el OV2640 (el que trae) y el OV3660. El driver
+# prueba al arrancar todos los sensores habilitados; los demás, fuera: el
+# arranque es más corto y el programa, más pequeño.
+CONFIG_OV2640_SUPPORT=y
+CONFIG_OV3660_SUPPORT=y
+CONFIG_OV7670_SUPPORT=n
+CONFIG_OV7725_SUPPORT=n
+CONFIG_NT99141_SUPPORT=n
+CONFIG_OV3640_SUPPORT=n
+CONFIG_OV5640_SUPPORT=n
+CONFIG_GC2145_SUPPORT=n
+CONFIG_GC032A_SUPPORT=n
+CONFIG_GC0308_SUPPORT=n
+CONFIG_BF3005_SUPPORT=n
+CONFIG_BF20A6_SUPPORT=n
+CONFIG_SC030IOT_SUPPORT=n
+CONFIG_HM1055_SUPPORT=n
+CONFIG_HM0360_SUPPORT=n
+CONFIG_MEGA_CCM_SUPPORT=n
+
+# --- La red y TLS ----------------------------------------------------------
+
+# Con WiFi y TLS, la SRAM interna (320 KB para todo) es lo que se acaba
+# primero. Los buffers del WiFi y de lwIP, y los del saludo TLS (unos 40 KB
+# por conexión), van a la PSRAM cuando se puede.
+CONFIG_SPIRAM_TRY_ALLOCATE_WIFI_LWIP=y
+CONFIG_MBEDTLS_EXTERNAL_MEM_ALLOC=y
+
+# El paquete de autoridades de certificación con el que se comprueba el
+# certificado de Google (ya viene activado por defecto; se deja escrito).
+CONFIG_MBEDTLS_CERTIFICATE_BUNDLE=y
+
+# IMPRESCINDIBLE para hablar con Google. Sus servidores mandan la raíz
+# "GTS Root R4" firmada también por "GlobalSign Root CA", que ya no está en
+# el paquete. Sin esta opción, la placa busca esa autoridad, no la encuentra
+# y corta: "esp-x509-crt-bundle: No matching trusted root certificate found".
+# Con ella, encadena con la GTS Root R4 del paquete. Probado con el código de
+# ESP-IDF v6.0.2 contra script.google.com el 17-10-2026.
+CONFIG_MBEDTLS_CERTIFICATE_BUNDLE_CROSS_SIGNED_VERIFY=y
+
+
+CONFIG_ESP_WIFI_IRAM_OPT=n
+CONFIG_ESP_WIFI_RX_IRAM_OPT=n
+CONFIG_ESP_WIFI_STATIC_RX_BUFFER_NUM=8
+CONFIG_ESP_WIFI_RX_BA_WIN=6
+CONFIG_FREERTOS_TASK_CREATE_ALLOW_EXT_MEM=y
+CONFIG_SPIRAM_ALLOW_STACK_EXTERNAL_MEMORY=y
+CONFIG_MBEDTLS_HARDWARE_AES=n
