@@ -1,0 +1,31 @@
+# Valores por defecto de este ejemplo. idf.py los aplica al crear el
+# sdkconfig; para cambiarlos después, `idf.py menuconfig` o borrar sdkconfig.
+
+# La Kaluga-1 trae 4 MB de flash. Con el valor por defecto (2 MB) se
+# desperdicia la mitad: ver clase-3/error-flash-size.md.
+CONFIG_ESPTOOLPY_FLASHSIZE_4MB=y
+
+# Con WiFi, MQTT y TLS (mqtts://) el programa ocupa unos 960 KB: en la
+# partición por defecto (1 MB) quedaría un 8 % libre. La tabla "large" le
+# deja 1,5 MB.
+CONFIG_PARTITION_TABLE_SINGLE_APP_LARGE=y
+
+# Tick de 1 ms, como en las Clases 4 y 5.
+CONFIG_FREERTOS_HZ=1000
+
+# Habilita uxTaskGetSystemState(): el informe enseña TODAS las tareas, también
+# las de la pila de red y la del cliente MQTT, con su prioridad y su pila libre.
+CONFIG_FREERTOS_USE_TRACE_FACILITY=y
+
+# Avisa por consola si una tarea desborda su pila, en lugar de reiniciar sin
+# explicación.
+CONFIG_FREERTOS_CHECK_STACKOVERFLOW_CANARY=y
+
+# El informe se imprime desde el callback de un temporizador software, que
+# corre en la tarea "Tmr Svc". Su pila por defecto (2 KB) va justa para una
+# veintena de líneas de ESP_LOGI.
+CONFIG_FREERTOS_TIMER_TASK_STACK_DEPTH=3584
+
+# El paquete de autoridades de certificación que usa la opción mqtts:// del
+# broker (ya viene activado por defecto; se deja escrito para que se vea).
+CONFIG_MBEDTLS_CERTIFICATE_BUNDLE=y

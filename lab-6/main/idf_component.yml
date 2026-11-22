@@ -1,0 +1,10 @@
+# Componentes gestionados que ESP-IDF descarga automáticamente al compilar.
+dependencies:
+  # Cliente MQTT de Espressif. Desde ESP-IDF v6 ya no viene dentro del IDF:
+  # es un componente del registro, como led_strip.
+  espressif/mqtt: "^1.1.0"
+  # Driver para LEDs direccionables (WS2812) usado por el LED RGB del Kaluga-1.
+  # La serie 3.x es la primera que compila contra ESP-IDF v6.
+  espressif/led_strip: "^3.0.3"
+  # Controlador del códec de audio ES8311 (micrófono de la Kaluga-1).
+  espressif/esp_codec_dev: "^1.3.4"
